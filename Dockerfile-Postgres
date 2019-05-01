@@ -1,0 +1,5 @@
+FROM postgres:latest
+
+RUN mkdir -p /tmp/psql_data/
+
+COPY db/structure.sql /docker-entrypoint-initdb.d/
