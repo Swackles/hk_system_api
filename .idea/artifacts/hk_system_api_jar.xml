@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="hk_system_api:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/hk_system_api_jar</output-path>
+    <root id="archive" name="hk_system_api.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
