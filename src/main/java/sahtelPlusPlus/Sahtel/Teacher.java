@@ -1,7 +1,6 @@
-package hkSystem.Sahtel;
+package sahtelPlusPlus.Sahtel;
 
 import java.util.ArrayList;
-import java.util.regex.Pattern;
 
 public class Teacher {
     private int Id;

@@ -1,6 +1,6 @@
-package hkSystem.Sahtel;
+package sahtelPlusPlus.Sahtel;
 
-import hkSystem.Regex.Find;
+import sahtelPlusPlus.Regex.Find;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -52,6 +52,12 @@ public class Tunniplaan {
                     find.Parse();
                     String values = find.getResult();
 
+                    if (!values.contains(". kursus")) {
+                        klass.setGroup(values);
+                        klass.setCourse((byte)0);
+                        break;
+                    }
+
                     find = new Find(values, "", " [0-9]. kursus");
                     find.Parse();
                     klass.setGroup(find.getResult());
@@ -84,9 +90,9 @@ public class Tunniplaan {
                     klass.setTeacher(dataRows[3].replaceAll("(.*?), ", "$1"));
 
                     if(dataRows.length < 5) {
-                        klass.setRoom((short)0);
+                        klass.setRoom("");
                     } else {
-                        klass.setRoom(Short.parseShort(dataRows[4].replaceAll("[A-Üa-ü ]+\\w ([0-9]+\\w)", "$1")));
+                        klass.setRoom(dataRows[4]);
                     }
                     klasses.add(klass);
                     break;

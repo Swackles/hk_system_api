@@ -1,4 +1,4 @@
-package hkSystem.Sahtel;
+package sahtelPlusPlus.Sahtel;
 
 import java.util.Calendar;
 
@@ -11,7 +11,7 @@ public class Klass {
     private String Name;
     private String Code;
     private String Teacher;
-    private short Room;
+    private String Room;
     private byte Amount;
     private String Description;
 
@@ -66,8 +66,8 @@ public class Klass {
         Teacher = teacher;
     }
 
-    public short getRoom() { return Room; }
-    void setRoom(short room) {
+    public String getRoom() { return Room; }
+    void setRoom(String room) {
         Room = room;
     }
 

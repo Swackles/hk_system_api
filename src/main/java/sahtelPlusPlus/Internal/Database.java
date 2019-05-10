@@ -1,4 +1,4 @@
-package hkSystem.Internal;
+package sahtelPlusPlus.Internal;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;

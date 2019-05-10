@@ -1,4 +1,4 @@
-package hkSystem.Regex;
+package sahtelPlusPlus.Regex;
 
 import java.io.IOException;
 import java.util.regex.Matcher;
@@ -22,7 +22,7 @@ public class Find {
         if (matcher.find()) {
             this.Result = matcher.group(1);
         } else {
-            throw new IOException("hkSystem.Regex.Find | Invalid input");
+            throw new IOException("sahtelPlusPlus.Regex.Find | Invalid input");
         }
     }
 

@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   app:
-    container_name: hk_system_api
+    container_name: sahtelPlusPlus
     env_file:
       - .env
     build:

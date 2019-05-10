@@ -1,10 +1,10 @@
-package hkSystem.Controllers;
+package sahtelPlusPlus.Controllers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import hkSystem.Internal.Homework;
-import hkSystem.Internal.User;
+import sahtelPlusPlus.Internal.Homework;
+import sahtelPlusPlus.Internal.User;
 import org.json.JSONObject;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;

@@ -1,4 +1,4 @@
-package hkSystem.Sahtel;
+package sahtelPlusPlus.Sahtel;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,7 +22,7 @@ public class Subject {
         if (matcher.find()) {
             return matcher;
         } else {
-            throw new IOException("hkSystem.Sahtel.Subject | Invalid input");
+            throw new IOException("sahtelPlusPlus.Sahtel.Subject | Invalid input");
         }
     }
 

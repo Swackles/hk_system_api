@@ -1,8 +1,6 @@
-package hkSystem.Controllers;
+package sahtelPlusPlus.Controllers;
 
 import org.springframework.http.ResponseEntity;
-
-import java.lang.reflect.Method;
 
 public class ErrorResponse {
     public static ResponseEntity Response(Exception e, String msg) {

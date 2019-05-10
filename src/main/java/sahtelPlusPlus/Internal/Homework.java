@@ -1,11 +1,7 @@
-package hkSystem.Internal;
-
-import hkSystem.Internal.HomeworkDatabase;
+package sahtelPlusPlus.Internal;
 
 import java.io.IOException;
-import java.sql.Time;
 import java.sql.Timestamp;
-import java.util.Calendar;
 
 public class Homework {
     private long Id;

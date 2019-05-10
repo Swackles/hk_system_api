@@ -6,4 +6,4 @@ USER root
 RUN gradle wrapper --gradle-version 4.2.1
 RUN ./gradlew build
 
-ENTRYPOINT ["java", "-jar", "build/libs/hk_system_api.jar"]
+ENTRYPOINT ["java", "-jar", "build/libs/sahtel++.jar"]
