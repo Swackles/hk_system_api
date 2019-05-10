@@ -28,7 +28,8 @@ public class TunniplaanController {
 
             API api = new API();
             ArrayList<Klass> tunniplaan = api.getTunniplaan();
-
+            for (Klass item:tunniplaan) {
+            }
             return ResponseEntity.ok(ow.writeValueAsString(tunniplaan));
         } catch (Exception e) {
             return ErrorResponse.Response(e, "Failed to get tunniplaan");

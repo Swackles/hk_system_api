@@ -26,6 +26,20 @@ public class Klass {
         this.Description = "";
 
     }
+
+    Klass(Klass klass) {
+        this.Date = klass.Date;
+        this.ClassStart = klass.ClassStart;
+        this.ClassEnd = klass.ClassEnd;
+        this.Group = klass.Group;
+        this.Course = klass.Course;
+        this.Name = klass.Name;
+        this.Code = klass.Code;
+        this.Teacher = klass.Teacher;
+        this.Room = klass.Room;
+        this.Amount = klass.Amount;
+        this.Description = klass.Description;
+    }
     public Calendar getDate() { return Date; }
     void setDate(int year, int month, int day) {
         Date.set(year, month, day);
@@ -41,7 +55,7 @@ public class Klass {
         ClassStart.set(Date.get(Calendar.YEAR), Date.get(Calendar.MONTH), Date.get(Calendar.DATE), hour, minute, seconds);
     }
 
-    String getGroup() { return Group; }
+    public String getGroup() { return Group; }
     void setGroup(String group) {
         Group = group;
     }

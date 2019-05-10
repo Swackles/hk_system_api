@@ -32,7 +32,6 @@ public class Tunniplaan {
             switch (result) {
                 case "weekline":
                     break;
-
                 case "dateline":
                     find = new Find(row ,"<td class=\"dateline\" colspan=\"5\">", "</td>");
                     find.Parse();
@@ -68,6 +67,7 @@ public class Tunniplaan {
                     break;
 
                 default:
+                    Klass klassClone = new Klass(klass);
                     String column = row.replaceAll("</td><td.*?>", "<<__new-row__>>");
                     column = column.replaceAll("<br>", ", ");
                     column = column.replaceAll("<br>", "");
@@ -81,20 +81,20 @@ public class Tunniplaan {
                     klass.setClassStart(Integer.parseInt(time[0]), Integer.parseInt(time[1]), 0);
 
                     time = startEnd[1].split(":");
-                    klass.setClassEnd(Integer.parseInt(time[0]), Integer.parseInt(time[1]), 0);
+                    klassClone.setClassEnd(Integer.parseInt(time[0]), Integer.parseInt(time[1]), 0);
 
                     String[] nameCode = dataRows[1].replaceAll("(.*?) \\((.*?)\\)", "$1<<__new-row__>>$2").split("<<__new-row__>>");
-                    klass.setName(nameCode[0]);
-                    klass.setCode(nameCode[1]);
-                    klass.setAmount(Byte.parseByte(dataRows[2]));
-                    klass.setTeacher(dataRows[3].replaceAll("(.*?), ", "$1"));
+                    klassClone.setName(nameCode[0]);
+                    klassClone.setCode(nameCode[1]);
+                    klassClone.setAmount(Byte.parseByte(dataRows[2]));
+                    klassClone.setTeacher(dataRows[3].replaceAll("(.*?), ", "$1"));
 
                     if(dataRows.length < 5) {
-                        klass.setRoom("");
+                        klassClone.setRoom("");
                     } else {
-                        klass.setRoom(dataRows[4]);
+                        klassClone.setRoom(dataRows[4]);
                     }
-                    klasses.add(klass);
+                    klasses.add(klassClone);
                     break;
             }
         }

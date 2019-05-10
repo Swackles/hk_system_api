@@ -34,7 +34,7 @@ public class API {
         calendar.add(Calendar.MONTH, 6);
         this.DateEnd = DateFormat.format(calendar.getTime());
 
-        this.Checked = "1";
+        this.Checked = "0";
         this.Classes = "";
         this.Subjects = "";
         this.Teachers = "";
@@ -84,9 +84,7 @@ public class API {
 
         httpPost.setEntity(new UrlEncodedFormEntity(arguments));
         HttpResponse httpResponse = httpClient.execute(httpPost);
-        String response = EntityUtils.toString(httpResponse.getEntity());
-
-        return response;
+        return EntityUtils.toString(httpResponse.getEntity());
     }
 
     public String getDateStart() { return DateStart; }
