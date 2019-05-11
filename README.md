@@ -15,18 +15,18 @@ This contains the schedule of classes
 Returns the basic schedule as an array containing objects like this:
 ```json
 {
-	"date" : date, 				// The date class is happening
-	"course" : int, 			// The course number
-	"group": string, 			// The group that has this class
-	"room" : string,  			// The room class is happening in
-	"amount" : int,  			// How many academic hours
-	"description" : string,  	// Description given by sahtel
-	"code" : string,  			// The code for the class
-	"teacher" : string,  		// The teacher for this class
-	"classStart" : DateTime,  	// The time this class starts
-	"classEnd" : DateTime,  	// The time this class ends
-	"name" : string,  			// name of the class
-	"homeworks" : string[],  	// array of homeworks
+	"date": "The date class is happening (dateTime)", 
+	"course": "The course number (int)", 
+	"group": "The group that has this class (string)",
+	"room": "The room class is happening in (string)",
+	"amount": "How many academic hours (int)",
+	"description": "Description given by sahtel (string)",
+	"code": "The code for the class (string)",
+	"teacher": "The teacher for this class (string)",
+	"classStart": "The time this class starts (DateTime)",
+	"classEnd": "The time this class ends (DateTime)",
+	"name": "name of the class (string)",
+	"homeworks": "array of homeworks (string[], null)",
 }
 ```
 
@@ -34,13 +34,13 @@ Returns the basic schedule as an array containing objects like this:
 You can post query filters which will base the search on it. The query filters should be a JSON string like this:
 ```JSON
 **{
-	"DateStart": DateTime,  // The starting date of class
-	"DateEnd": DateTime,  	// The ending date of class
-	"Checked": int,  		// 1 - search by Date, 0 - don't search
-	"Classes": string,  	// array of class IDs
-	"Subjects": string,  	// Array of subject IDs
-	"Teachers": string,  	// Array of Teachers IDs
-	"Rooms": string  	// Array of Rooms
+	"DateStart": "The starting date of class (DateTime)",
+	"DateEnd": "The ending date of class (DateTime)",
+	"Checked": "1 - search by Date, 0 - don't search (int)",
+	"Classes": "array of class IDs (string[])",
+	"Subjects": "Array of subject IDs (string[])",
+	"Teachers": "Array of Teachers IDs (string[])",
+	"Rooms": "Array of Rooms string[])"
 }**
 ```
 This request will return same data structure as `GET /tunniplaan`
@@ -51,9 +51,9 @@ This request will return same data structure as `GET /tunniplaan`
 This will get the list of possible subjects. It will return a JSON array containing objects like this:
 ```JSON
 {
-	"Id": int, 				// Id of the subject
-	"Name": string,  		// Name of the subject
-	"Code": string  		// Code of the subject
+	"Id": "(int)",
+	"Name": "(string)",
+	"Code": "(string)"
 ]}
 ```
 
@@ -62,8 +62,8 @@ This will get the list of possible subjects. It will return a JSON array contain
 This will get the list of all the teachers. It will return a JSON array containing objects like this:
 ```JSON
 {
-	"Id": int,
-	"Name": string
+	"Id": "(int)",
+	"Name": "(string)"
 }
 ```
 
@@ -73,8 +73,8 @@ This will get the list of all the teachers. It will return a JSON array containi
 Get all of the possible rooms classes are in. Will return a json array containing objects like this
 ```JSON
 {
-	"Id": int,
-	"Name": string
+	"Id": "(int)",
+	"Name": "(string)"
 }
 ```
 
@@ -84,7 +84,7 @@ Get all of the possible rooms classes are in. Will return a json array containin
 Get all of the possible classes currently in the schedule. Will return a json array containing objects like this
 ```JSON
 {
-	"Id": int,
-	"Name": string
+	"Id": "(int)",
+	"Name": "(string)"
 }
 ```
