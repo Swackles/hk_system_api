@@ -2,19 +2,17 @@ version: '3.7'
 services:
   app:
     container_name: sahtelPlusPlus
-    env_file:
-      - .env
     build:
       context: ./
       dockerfile: Dockerfile
     ports:
       - 9000:9000
+    env_file:
+      - .env
     depends_on:
       - db
-    networks:
-      - hk_system
   db:
-    container_name: hk_system_db
+    container_name: sahtelPlusPlus_db
     build:
       context: ./
       dockerfile: Dockerfile-Postgres
@@ -23,13 +21,7 @@ services:
     env_file:
       - .env
     volumes:
-      - hk_system_db:/var/lib/postgresql/data
-    networks:
-      - hk_system
+      - sahtelPlusPlus_db:/var/lib/postgresql/data
 
 volumes:
-  hk_system_db:
-
-networks:
-  hk_system:
-    driver: bridge
+  sahtelPlusPlus_db:

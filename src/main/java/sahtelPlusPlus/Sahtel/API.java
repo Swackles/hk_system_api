@@ -1,9 +1,11 @@
 package sahtelPlusPlus.Sahtel;
 
+import org.apache.http.HttpRequest;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.message.BasicNameValuePair;
@@ -60,6 +62,19 @@ public class API {
         return Subject.Parse(result);
     }
 
+    private String getIndex() throws IOException {
+        return connectServer("http://start.hk.tlu.ee/sahtelbeta/tunniplaan/index.php");
+    }
+
+    public ArrayList<Room> getRoom() throws IOException {
+        return Room.Parse(getIndex());
+    }
+
+    // Due to conflict error with Java.lang.Object this is only one that uses Clas instead of Class
+    public ArrayList<Class> getClas() throws IOException {
+        return Class.Parse(getIndex());
+    }
+
     public ArrayList<Klass> getTunniplaan() throws IOException {
 
         List<NameValuePair> arguments = new ArrayList<>();
@@ -84,6 +99,14 @@ public class API {
 
         httpPost.setEntity(new UrlEncodedFormEntity(arguments));
         HttpResponse httpResponse = httpClient.execute(httpPost);
+        return EntityUtils.toString(httpResponse.getEntity());
+    }
+
+    private String connectServer(String url) throws IOException {
+        HttpClient httpClient = HttpClientBuilder.create().build();
+        HttpGet httpGet = new HttpGet(url);
+
+        HttpResponse httpResponse = httpClient.execute(httpGet);
         return EntityUtils.toString(httpResponse.getEntity());
     }
 
