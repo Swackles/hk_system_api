@@ -34,15 +34,15 @@ Returns the basic schedule as an array containing objects like this:
 #### POST
 You can post query filters which will base the search on it. The query filters should be a JSON string like this:
 ```JSON
-**{
+{
 	"startDate": "The starting date of class (DateTime)",
 	"endDate": "The ending date of class (DateTime)",
 	"checked": "To use dates defined (bool)",
 	"classes": "array of class IDs (string[])",
-	"subjects": "Array of subject IDs (string[])",
-	"teachers": "Array of Teachers IDs (string[])",
-	"rooms": "Array of Rooms string[])"
-}**
+	"subjects": "String of subject id-s, room id-s are seperated by '-'",
+	"teachers": "String of teacher id-s, room id-s are seperated by '-'",
+	"rooms": "String of room id-s, room id-s are seperated by '-'"
+}
 ```
 This request will return same data structure as `GET /tunniplaan`
 
@@ -51,21 +51,21 @@ This request will return same data structure as `GET /tunniplaan`
 ### GET /subject
 This will get the list of possible subjects. It will return a JSON array containing objects like this:
 ```JSON
-{
+{[{
 	"id": "(int)",
 	"name": "(string)",
 	"code": "(string)"
-}
+]]}
 ```
 
 
 ### GET /teacher
 This will get the list of all the teachers. It will return a JSON array containing objects like this:
 ```JSON
-{
+{[{
 	"id": "(int)",
 	"name": "(string)"
-}
+]]}
 ```
 
 <br>
@@ -73,10 +73,10 @@ This will get the list of all the teachers. It will return a JSON array containi
 ### GET /room
 Get all of the possible rooms classes are in. Will return a json array containing objects like this
 ```JSON
-{
+{[{
 	"id": "(int)",
 	"name": "(string)"
-}
+}]}
 ```
 
 <br>
@@ -84,8 +84,8 @@ Get all of the possible rooms classes are in. Will return a json array containin
 ### GET /class
 Get all of the possible classes currently in the schedule. Will return a json array containing objects like this
 ```JSON
-{
+{[{
 	"id": "(int)",
 	"name": "(string)"
-}
+}]}
 ```

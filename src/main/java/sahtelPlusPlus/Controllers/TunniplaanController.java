@@ -68,7 +68,7 @@ public class TunniplaanController {
             arr = request.getString("teachers").split("-");
             api.setTeachers(new ArrayList<>(Arrays.asList(arr)));
 
-            arr = request.getString("r  ooms").split("-");
+            arr = request.getString("rooms").split("-");
             api.setRooms(new ArrayList<>(Arrays.asList(arr)));
 
             return ResponseEntity.ok(ow.writeValueAsString(api.getTunniplaan()));
