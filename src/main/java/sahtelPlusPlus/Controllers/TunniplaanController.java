@@ -45,30 +45,30 @@ public class TunniplaanController {
 
             Tunniplaan tunniplaan;
 
-            if(!(request.has("start") && request.has("end") && request.has("checked") && request.has("classes") && request.has("subjects") && request.has("teachers") && request.has("room"))) return Tunniplaan();
+            if(!(request.has("startDate") && request.has("endDate") && request.has("checked") && request.has("classes") && request.has("subjects") && request.has("teachers") && request.has("rooms"))) return Tunniplaan();
 
             API api = new API();
             SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
             Calendar cal = Calendar.getInstance();
 
-            cal.setTime(sdf.parse(request.getString("DateStart")));
+            cal.setTime(sdf.parse(request.getString("startDate")));
             api.setDateStart(cal);
 
-            cal.setTime((sdf.parse(request.getString("DateEnd"))));
+            cal.setTime((sdf.parse(request.getString("endDate"))));
             api.setDateEnd(cal);
 
-            api.setChecked(request.getInt("Checked") == 1);
+            api.setChecked(request.getBoolean("checked"));
 
-            String[] arr = request.getString("Classes").split(", ");
+            String[] arr = request.getString("classes").split("-");
             api.setClasses(new ArrayList<>(Arrays.asList(arr)));
 
-            arr = request.getString("Subjects").split(", ");
+            arr = request.getString("subjects").split("-");
             api.setSubjects(new ArrayList<>(Arrays.asList(arr)));
 
-            arr = request.getString("Teachers").split(", ");
+            arr = request.getString("teachers").split("-");
             api.setTeachers(new ArrayList<>(Arrays.asList(arr)));
 
-            arr = request.getString("Rooms").split(", ");
+            arr = request.getString("r  ooms").split("-");
             api.setRooms(new ArrayList<>(Arrays.asList(arr)));
 
             return ResponseEntity.ok(ow.writeValueAsString(api.getTunniplaan()));
