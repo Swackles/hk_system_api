@@ -48,7 +48,7 @@ public class TunniplaanController {
             if(!request.has("startDate") || !request.has("endDate") || !request.has("checked") || !request.has("classes") || !request.has("subjects") || !request.has("teachers") || !request.has("rooms")) ErrorResponse.Response(null, "Invalid inputs");
 
             API api = new API();
-            SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+            SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
             Calendar cal = Calendar.getInstance();
 
             cal.setTime(sdf.parse(request.getString("startDate")));
