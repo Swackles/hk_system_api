@@ -53,11 +53,13 @@ public class User {
     public String getGoogleToken() { return this.GoogleToken; }
     public Timestamp getCreated() { return this.Created; }
     public boolean getAuth() { return this.Auth; }
+    public long getGooleId() { return this.GoogleId; }
 
     //save properties
     void setId(long id) { this.Id = id; }
     void setCreated(Timestamp created) { this.Created = created; }
     void setAuth(Boolean auth) { this.Auth = auth; }
+    void setGoogleId(long googleId) { this.GoogleId = googleId; }
 
     //Exception
     public class AuthenticationException extends Exception {

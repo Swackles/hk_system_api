@@ -45,7 +45,7 @@ public class TunniplaanController {
 
             Tunniplaan tunniplaan;
 
-            if(!(request.has("startDate") && request.has("endDate") && request.has("checked") && request.has("classes") && request.has("subjects") && request.has("teachers") && request.has("rooms"))) return Tunniplaan();
+            if(!request.has("startDate") || !request.has("endDate") || !request.has("checked") || !request.has("classes") || !request.has("subjects") || !request.has("teachers") || !request.has("rooms")) ErrorResponse.Response(null, "Invalid inputs");
 
             API api = new API();
             SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");

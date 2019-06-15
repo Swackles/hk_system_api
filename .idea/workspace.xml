@@ -8,7 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5989ddcd-242c-40ba-8e96-f2d9cc1dab8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Controllers/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Controllers/ErrorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Controllers/HomeworkController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Controllers/HomeworkController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Controllers/TunniplaanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Controllers/TunniplaanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Internal/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Internal/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Internal/UserDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Internal/UserDatabase.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -47,10 +50,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Controllers/ErrorResponse.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Controllers/TunniplaanController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="132" selection-start-line="8" selection-start-column="132" selection-end-line="8" selection-end-column="132" />
+            <state relative-caret-position="108">
+              <caret line="47" column="248" selection-start-line="47" selection-start-column="248" selection-end-line="47" selection-end-column="248" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,8 +81,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/hkSystem/APIReader/klass.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hkSystem/APIReader/Klass.java" />
         <option value="$PROJECT_DIR$/src/main/java/hkSystem/Regex/Replace.java" />
         <option value="$PROJECT_DIR$/src/main/java/hkSystem/Sahtel/Teacher.java" />
         <option value="$PROJECT_DIR$/src/gradle.properties" />
@@ -118,14 +122,16 @@
         <option value="$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Sahtel/Class.java" />
         <option value="$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Sahtel/Room.java" />
         <option value="$PROJECT_DIR$/readme.md" />
-        <option value="$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Internal/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Controllers/UserController.java" />
         <option value="$PROJECT_DIR$/env_generator" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/env_generator.py" />
         <option value="$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Controllers/ClassController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Controllers/TunniplaanController.java" />
         <option value="$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Controllers/ErrorResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Internal/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Internal/UserDatabase.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Controllers/HomeworkController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Controllers/TunniplaanController.java" />
       </list>
     </option>
   </component>
@@ -182,6 +188,15 @@
               <item name="sahtelPlusPlus" type="462c0819:PsiDirectoryNode" />
               <item name="Controllers" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="sahtel++" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sahtelPlusPlus" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sahtelPlusPlus" type="462c0819:PsiDirectoryNode" />
+              <item name="Internal" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -191,7 +206,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560604663049" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560613285901" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -294,38 +309,6 @@
       <window_info anchor="right" id="Capture Analysis" order="8" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.20738254" />
-      <window_info id="Structure" order="1" sideWeight="0.50141644" side_tool="true" weight="0.16040269" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.50141644" side_tool="true" weight="0.16040269" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" weight="0.3286119" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49932885" weight="0.29886687" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3286119" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067115" side_tool="true" weight="0.3371105" />
-      <window_info anchor="bottom" id="Build" order="11" weight="0.32152975" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3286119" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Google Cloud Storage" order="4" />
-      <window_info anchor="right" id="Maven" order="5" />
-      <window_info anchor="right" id="Gradle" order="6" weight="0.3295302" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="right" id="Capture Analysis" order="8" />
-      <window_info anchor="right" id="Palette&#9;" order="9" />
-    </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/gradlew">
@@ -389,26 +372,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Internal/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Internal/UserDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="26" column="18" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -434,16 +397,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Controllers/HomeworkController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -538,23 +491,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Controllers/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="31" column="63" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Internal/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/create-env.py" />
     <entry file="file://$PROJECT_DIR$/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
@@ -608,20 +544,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Controllers/TunniplaanController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Controllers/ErrorResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="74" column="31" lean-forward="true" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
+        <state relative-caret-position="144">
+          <caret line="8" column="132" selection-start-line="8" selection-start-column="132" selection-end-line="8" selection-end-column="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Internal/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Controllers/ErrorResponse.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Internal/UserDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="132" selection-start-line="8" selection-start-column="132" selection-end-line="8" selection-end-column="132" />
+        <state relative-caret-position="738">
+          <caret line="41" column="44" lean-forward="true" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Internal/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="915">
+          <caret line="61" column="64" selection-start-line="61" selection-start-column="64" selection-end-line="61" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Controllers/HomeworkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Controllers/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="31" column="63" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sahtelPlusPlus/Controllers/TunniplaanController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="47" column="248" selection-start-line="47" selection-start-column="248" selection-end-line="47" selection-end-column="248" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -24,8 +24,8 @@ public class HomeworkController {
 
             if(!validateInput(request)) return ResponseEntity.status(404).body("Missing arguments");
 
-            User user = new User(null, request.getString("token"));
-            user.authenticate(user.AUTH_TOKEN);
+            User user = new User(request.getString("token"));
+            user.authenticate();
 
             if (!user.getAuth()) return ResponseEntity.status(401).body("Invalid user");
 

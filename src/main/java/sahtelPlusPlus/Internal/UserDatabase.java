@@ -20,7 +20,7 @@ class UserDatabase {
 
     User save(User user) throws SQLException {
         Database db = new Database();
-        db.execute("INSERT INTO public.user (google_token, token) VALUES ('" +user.getGoogleToken()+ "', '" +user.getToken()+ "')");
+        db.execute("INSERT INTO public.user (google_token) VALUES ('" +user.getGoogleToken()+ "')");
 
         if (db.getUpdatedRows() < 1) throw new SQLException("Couldn't insert user to the database");
 
@@ -32,15 +32,14 @@ class UserDatabase {
 
 
     private User AppendDataToUser(ResultSet rs) throws SQLException {
-        User user = new User();
+        User user = new User(null);
 
         if (!rs.next()) {
             user.setAuth(false);
         } else {
             do {
                 user.setId(rs.getInt("id"));
-                user.setGoogleToken(rs.getString("google_token"));
-                user.setToken(rs.getString("token"));
+                user.setGoogleId(rs.getLong("google_id"));
                 user.setCreated(rs.getTimestamp("created"));
                 user.setAuth(true);
             } while (rs.next());
