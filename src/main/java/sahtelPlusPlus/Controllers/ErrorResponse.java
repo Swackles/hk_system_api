@@ -5,7 +5,9 @@ import org.springframework.http.ResponseEntity;
 public class ErrorResponse {
     public static ResponseEntity Response(Exception e, String msg) {
         String env = System.getenv("ENV");
-        System.out.println(e);
+
+        String conOutPut = String.format("===============; ERROR ;===============\n%s\n===============; ERROR ;===============", e);
+        System.out.println(conOutPut);
 
         switch (env) {
             case "development":
