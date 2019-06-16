@@ -14,10 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Map;
+import java.util.*;
 
 @RestController
 public class TunniplaanController {
@@ -48,14 +45,16 @@ public class TunniplaanController {
             if(!request.has("startDate") || !request.has("endDate") || !request.has("checked") || !request.has("classes") || !request.has("subjects") || !request.has("teachers") || !request.has("rooms")) ErrorResponse.Response(null, "Invalid inputs");
 
             API api = new API();
-            SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
-            Calendar cal = Calendar.getInstance();
 
-            cal.setTime(sdf.parse(request.getString("startDate")));
-            api.setDateStart(cal);
+            String[] date = request.getString("startDate").split(".");
+            Calendar startDate = Calendar.getInstance();
+            startDate.set(Integer.parseInt(date[2]), Integer.parseInt(date[1]), Integer.parseInt(date[0]));
+            api.setDateStart(startDate);
 
-            cal.setTime((sdf.parse(request.getString("endDate"))));
-            api.setDateEnd(cal);
+            date = request.getString("endDate").split(".");
+            Calendar endDate = Calendar.getInstance();
+            endDate.set(Integer.parseInt(date[2]), Integer.parseInt(date[1]), Integer.parseInt(date[0]));
+            api.setDateEnd(endDate);
 
             api.setChecked(request.getBoolean("checked"));
 
